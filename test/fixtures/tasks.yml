@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  done: false
+  name: MyString
+  notes: MyText
+  priority: 1
+  due: 2015-02-12
+
+two:
+  done: false
+  name: MyString
+  notes: MyText
+  priority: 1
+  due: 2015-02-12
