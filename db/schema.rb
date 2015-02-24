@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212191941) do
+ActiveRecord::Schema.define(version: 20150224230843) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+  end
+
+  add_index "categories", ["name"], name: "index_categories_on_name", unique: true
+
+  create_table "estimates", force: :cascade do |t|
+    t.integer "hours"
+  end
+
+  add_index "estimates", ["hours"], name: "index_estimates_on_hours", unique: true
 
   create_table "tasks", force: :cascade do |t|
     t.boolean  "done"
@@ -19,8 +31,10 @@ ActiveRecord::Schema.define(version: 20150212191941) do
     t.text     "notes"
     t.integer  "priority"
     t.date     "due"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.integer  "estimate_id"
   end
 
 end
