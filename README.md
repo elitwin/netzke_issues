@@ -1,4 +1,4 @@
-== README
+# Netzke Demo
 
 This extension of the Netzke tutorial shows some of the UI issues discovered with Netzke
 and ExtJS.
