@@ -16,7 +16,7 @@ and ExtJS.
 3. Setup the symlink for public/extjs
 4. Optionally setup a symlink for public/images/icons
 5. Run rake db:migrate to create the sqlite3 database
---* This will also seed the lookup and task tables with some sample data
+  * This will also seed the lookup and task tables with some sample data
 
 ## Issues
 
