@@ -12,15 +12,24 @@ and ExtJS.
 ## Installation
 
 1. Clone this repo to a local repo
+
   $ git clone git@github.com:elitwin/netzke_demo.git && netzke_demo
+
 2. Install required Gems
+
   $ bundle install
+
 3. Setup the symlink for public/extjs
+
   $ ln -s PATH_TO_EXTJS_FILES public/extjs
+
 4. Optionally setup a symlink for public/images/icons
+
   $ mkdir public/images
   $ ln -s PATH_TO_ICON_FILES public/images/icons
+
 5. Create database, run migrations and seed the demo data
+
   $ rake db:create && rake db:migrate && rake db:seed
 
 ## Issues
