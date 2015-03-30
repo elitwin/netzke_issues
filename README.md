@@ -26,6 +26,7 @@ and ExtJS.
 4. Optionally setup a symlink for public/images/icons
 
   $ mkdir public/images
+
   $ ln -s PATH_TO_ICON_FILES public/images/icons
 
 5. Create database, run migrations and seed the demo data
