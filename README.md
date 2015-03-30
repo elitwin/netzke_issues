@@ -13,7 +13,7 @@ and ExtJS.
 
 1. Clone this repo to a local repo
 
-  $ git clone git@github.com:elitwin/netzke_demo.git && netzke_demo
+  $ git clone git@github.com:elitwin/netzke_demo.git && cd netzke_demo
 
 2. Install required Gems
 
