@@ -4,7 +4,7 @@ This extension of the Netzke tutorial shows some of the UI issues discovered wit
 and ExtJS.
 
 ## Requirements
-* Ruby ~> 1.9.3
+* Ruby ~> 2.1.5
 * Rails ~> 4.2.0
 * Netzke ~> 0.11.0
 * ExtJS = 4.2.1
@@ -12,9 +12,13 @@ and ExtJS.
 ## Installation
 
 Clone this repo to a local repo
+
 Have ExtJS and the icon library available
+
 Setup the symlink for public/extjs
+
 Optionally setup a symlink for public/images/icons
+
 Run rake db:migrate to create the sqlite3 database
   This will also seed the lookup and task tables with some sample data
 
