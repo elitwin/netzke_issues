@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-
-gem 'netzke-core', '~>0.11.0'
-gem 'netzke-basepack', '~>0.11.0'
+gem 'netzke', '~>0.12.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.2.1'
