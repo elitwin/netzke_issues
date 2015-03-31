@@ -20,6 +20,7 @@ number_of_tasks.times do |i|
   Task.create({
                 :name => "Task #{i + 1}",
                 :priority => i + 1,
+                :score => rand(10000)/10000.0,
                 :due => Time.now.to_date,
                 :category_id => cat_ids[rand(3)],
                 :estimate_id => i < 5 ? est_ids[0] : est_ids[rand(7)]

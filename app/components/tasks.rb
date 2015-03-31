@@ -7,6 +7,7 @@ class Tasks < Netzke::Basepack::Grid
                  :name,
                  {name: :notes, flex: 1},
                  :priority,
+                 :score,
                  {name: :due, header: "Due On"},
                  {name: :category__name, header: "Category"},
                  {name: :estimate__hours, header: "Est. Hours"},
