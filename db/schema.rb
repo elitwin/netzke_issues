@@ -11,31 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331214218) do
+ActiveRecord::Schema.define(version: 20150224221907) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
   end
 
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true
 
   create_table "estimates", force: :cascade do |t|
-    t.integer "hours"
+    t.integer "hours", null: false
   end
 
   add_index "estimates", ["hours"], name: "index_estimates_on_hours", unique: true
 
   create_table "tasks", force: :cascade do |t|
-    t.boolean  "done"
-    t.string   "name"
+    t.boolean  "done",                                null: false
+    t.string   "name",                                null: false
     t.text     "notes"
-    t.integer  "priority"
-    t.date     "due"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "priority",                            null: false
+    t.date     "due",                                 null: false
+    t.float    "score",                               null: false
+    t.decimal  "rate",        precision: 7, scale: 4, null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "category_id"
     t.integer  "estimate_id"
-    t.float    "score"
   end
 
 end

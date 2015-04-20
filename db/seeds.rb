@@ -17,10 +17,12 @@ est_ids = []
 end
 
 number_of_tasks.times do |i|
-  Task.create({
+  Task.create!({
+                :done => false,
                 :name => "Task #{i + 1}",
                 :priority => i + 1,
                 :score => rand(10000)/10000.0,
+                :rate => [3.5, 3.75, 3.875, 3.999][rand(3)],
                 :due => Time.now.to_date,
                 :category_id => cat_ids[rand(3)],
                 :estimate_id => i < 5 ? est_ids[0] : est_ids[rand(7)]
