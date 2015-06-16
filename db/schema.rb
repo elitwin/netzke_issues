@@ -13,17 +13,20 @@
 
 ActiveRecord::Schema.define(version: 20150224221907) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
   end
 
-  add_index "categories", ["name"], name: "index_categories_on_name", unique: true
+  add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
 
   create_table "estimates", force: :cascade do |t|
     t.integer "hours", null: false
   end
 
-  add_index "estimates", ["hours"], name: "index_estimates_on_hours", unique: true
+  add_index "estimates", ["hours"], name: "index_estimates_on_hours", unique: true, using: :btree
 
   create_table "tasks", force: :cascade do |t|
     t.boolean  "done",                                null: false
@@ -39,4 +42,6 @@ ActiveRecord::Schema.define(version: 20150224221907) do
     t.integer  "estimate_id"
   end
 
+  add_foreign_key "tasks", "categories"
+  add_foreign_key "tasks", "estimates"
 end

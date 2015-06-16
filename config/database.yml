@@ -10,6 +10,12 @@ default: &default
   timeout: 5000
 
 development:
+  adapter: postgresql
+  encoding: unicode
+  database: netzke_issues_development
+  pool: 5
+
+developmentx:
   <<: *default
   database: db/development.sqlite3
 
